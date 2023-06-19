@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+</head>
+<body>
+<form>
+    <input type="text" id="num1" name="n1">
+    <input type="text" id="num2" name="n2"><br>
+    <input type="button" value="Addition(+)" name="Addition(+)" onclick="Add()">
+    <input type="button" value="Subtraction(-)" onclick="Sub()">
+    <input type="button" value="Multiplication(*)" onclick="Mul()">
+    <input type="button" value="Division(/)" onclick="Div()">
+</form>
+<script>
+     function Add() {
+         let numb1= +document.getElementById("num1").value;
+         let numb2 = +document.getElementById("num2").value;
+         let result;
+         result=numb1+numb2;
+         alert(result);
+
+     }
+    function Sub() {
+        let numb1= +document.getElementById("num1").value;
+        let numb2 = +document.getElementById("num2").value;
+        let result;
+
+        result= numb1-numb2;
+        alert(result);
+
+    }
+    function Mul() {
+        let numb1= +document.getElementById("num1").value;
+        let numb2 = +document.getElementById("num2").value;
+        let result;
+
+        result= numb1*numb2;
+        alert(result);
+
+    }
+    function Div() {
+        let numb1= +document.getElementById("num1").value;
+        let numb2 = +document.getElementById("num2").value;
+        let result;
+        result = numb1/numb2;
+        alert(result);}
+
+
+</script>
+</body>
+</html>
