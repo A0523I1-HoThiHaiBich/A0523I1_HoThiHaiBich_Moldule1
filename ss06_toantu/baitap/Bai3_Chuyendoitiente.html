@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+    <style>
+        th, td {
+            width: 30%;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<form>
+    <table>
+        <h1>TRANSFER MONEY</h1>
+        <tr>
+            <th>Amount</th>
+            <th>From currency</th>
+            <th>To currency</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="money">
+            </td>
+            <td>
+                <select id="fromcountry">
+                    <option value="VN">VietNam</option>
+                    <option value="US">USA</option>
+                </select>
+            </td>
+            <td>
+                <select id="tocountry">
+                    <option value="VN">VietNam</option>
+                    <option value="US">USA</option>
+                </select>
+            </td>
+            <td>
+                <input type="button" value="convert" name="convert" onclick="chuyen()">
+            </td>
+        </tr>
+    </table>
+
+</form>
+<script>
+    function chuyen() {
+        let number = +document.getElementById('money').value;
+        let from = document.getElementById('fromcountry').value;
+        let to = document.getElementById('tocountry').value;
+        let transfer;
+        if (from == "VN"&& to == "US") {
+                 transfer = number / 23000;
+        }
+        if (from == "US" &&to == "VN") {
+                 transfer = number * 23000;
+        }
+
+        alert(transfer);
+
+
+    }
+
+</script>
+</body>
+</html>
