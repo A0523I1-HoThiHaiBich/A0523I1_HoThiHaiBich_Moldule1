@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator nang cao</title>
+    <style>
+        table {
+            text-align: center;
+            border-collapse: collapse;
+            width: 50%;
+        }
+        table,th,td{
+            border: 1px solid black;
+        }
+        th{
+            text-align: right;
+        }
+
+        td{
+            width: 13%;
+            height: 30px;
+        }
+        button{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr><th colspan="7" id="display"></th></tr>
+    <tr>
+        <td><button type="button">Rad</button></td>
+        <td><button type="button">...</button></td>
+        <td><button type="button">x!</button></td>
+        <td><button type="button">(</button></td>
+        <td><button type="button">)</button></td>
+        <td><button type="button">%</button></td>
+        <td><button type="button" onclick="reset()">AC</button></td>
+    </tr>
+    <tr>
+        <td><button type="button">Inv</button></td>
+        <td><button type="button">sin</button></td>
+        <td><button type="button">cos</button></td>
+        <td><button type="button" onclick="n7()">7</button></td>
+        <td><button type="button" onclick="n8()">8</button></td>
+        <td><button type="button" onclick="n9()">9</button></td>
+        <td><button type="button" onclick="div()">:</button></td>
+
+    </tr>
+    <tr>
+        <td><button type="button">pi</button></td>
+        <td><button type="button">cos</button></td>
+        <td><button type="button">log</button></td>
+        <td><button type="button" onclick="n4()">4</button></td>
+        <td><button type="button" onclick="n5()">5</button></td>
+        <td><button type="button" onclick="n6()" >6</button></td>
+        <td><button type="button" onclick="mul()">*</button></td>
+
+    </tr>
+    <tr>
+        <td><button type="button" >e</button></td>
+        <td><button type="button">tan</button></td>
+        <td><button type="button">v</button></td>
+        <td><button type="button" onclick="n1()">1</button></td>
+        <td><button type="button" onclick="n2()">2</button></td>
+        <td><button type="button"onclick="n3()" >3</button></td>
+        <td><button type="button" onclick="sub()">-</button></td>
+
+    </tr>
+    <tr>
+        <td><button type="button">Ans</button></td>
+        <td><button type="button">Exp</button></td>
+        <td><button type="button">xy</button></td>
+        <td><button type="button" onclick="n0()">0</button></td>
+        <td><button type="button" onclick="dot()">.</button></td>
+        <td><button type="button" onclick="result()">=</button></td>
+        <td><button type="button" onclick="add()">+</button></td>
+    </tr>
+</table>
+<script>
+    function n0() {
+        let a= document.getElementById("display").innerHTML;
+        let b=a+"0";
+        document.getElementById("display").innerHTML=b;
+    }
+    function n1() {
+        let a= document.getElementById("display").innerHTML;
+        let b=a+"1";
+        document.getElementById("display").innerHTML=b;
+    }
+    function n2() {
+        let a= document.getElementById("display").innerHTML;
+        let b=a+"2";
+        document.getElementById("display").innerHTML=b;
+    }
+    function n3() {
+        let a= document.getElementById("display").innerHTML;
+        let b=a+"3";
+        document.getElementById("display").innerHTML=b;
+    }
+    function n4() {
+        let a= document.getElementById("display").innerHTML;
+        let b=a+"4";
+        document.getElementById("display").innerHTML=b;
+    }
+    function n5() {
+        let a= document.getElementById("display").innerHTML;
+        let b=a+"5";
+        document.getElementById("display").innerHTML=b;
+    }
+    function n6() {
+        let a= document.getElementById("display").innerHTML;
+        let b=a+"6";
+        document.getElementById("display").innerHTML=b;
+    }
+    function n7() {
+        let a= document.getElementById("display").innerHTML;
+        let b=a+"7";
+        document.getElementById("display").innerHTML=b;
+    }
+    function n8() {
+        let a= document.getElementById("display").innerHTML;
+        let b=a+"0";
+        document.getElementById("display").innerHTML=b;
+    }
+    function n9() {
+        let a= document.getElementById("display").innerHTML;
+        let b=a+"9";
+        document.getElementById("display").innerHTML=b;
+    }
+    function add() {
+        let a= document.getElementById("display").innerHTML;
+        let b=a+"+";
+        document.getElementById("display").innerHTML=b;
+    }
+    function sub() {
+        let a= document.getElementById("display").innerHTML;
+        let b=a+"-";
+        document.getElementById("display").innerHTML=b;
+    }
+    function mul() {
+        let a= document.getElementById("display").innerHTML;
+        let b=a+"*";
+        document.getElementById("display").innerHTML=b;
+    }
+    function div() {
+        let a= document.getElementById("display").innerHTML;
+        let b=a+":";
+        document.getElementById("display").innerHTML=b;
+    }
+    function reset() {
+        let a= document.getElementById("display").innerHTML;
+        let b="";
+        document.getElementById("display").innerHTML=b;
+    }
+    function result() {
+        let a =document.getElementById("display").innerHTML;
+        document.getElementById("display").innerHTML=eval(a);
+
+    }
+
+
+</script>
+
+</body>
+</html>
