@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Max 3 số</title>
+</head>
+<body>
+<script>
+    let a= prompt("Nhập số a:");
+    let b= prompt("Nhập số b:");
+    let c= prompt("Nhập số c:");
+    let max=a;
+    if(a==b&&b==c) alert("Ba số bằng nhau");
+    else {if( a>b && a>c) max=a;
+            else if(b>c) max=b;
+                else max=c;
+    alert("Số lớn nhất trong ba số:"+ a+","+ b+","+ c+" là: "+ max)}
+</script>
+
+</body>
+</html>

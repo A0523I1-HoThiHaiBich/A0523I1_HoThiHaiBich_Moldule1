@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính cơ bản</title>
+    <style>
+        table{
+            width: 300px;
+            height: 200px;
+            border-collapse: collapse;
+        }
+        th{
+            border: 1px;
+            height: 30px;
+
+        }
+        td{
+
+        }
+        button{
+
+            width:50px ;
+            height: 40px;
+            text-align: center;
+            padding-left: 20%;
+            padding-right: 20%;
+        }
+    </style>
+</head>
+<body>
+<html>
+<form>
+    <fieldset style="width: 300px">
+        <table >
+            <tr>
+                <th colspan="4" id="display" style="width: 300px; height: 25px"></th>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="n1()">1</button></td>
+                <td><button type="button" onclick="n2()">2</button></td>
+                <td><button type="button" onclick="n3()">3</button></td>
+                <td><button type="button" onclick="add()">+</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="n4()">4</button></td>
+                <td><button type="button" onclick="n5()">5</button></td>
+                <td><button type="button" onclick="n6()">6</button></td>
+                <td><button type="button" onclick="sub()">-</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="n7()">7</button></td>
+                <td><button type="button" onclick="n8()">8</button></td>
+                <td><button type="button" onclick="n9()">9</button></td>
+                <td><button type="button" onclick="mul()">*</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="resett()">C</button></td>
+                <td><button type="button" onclick="n0()">0</button></td>
+                <td><button type="button" onclick="anw()">=</button></td>
+                <td><button type="button" onclick="div()">/</button></td>
+            </tr>
+        </table>
+    </fieldset>
+</form>
+</html>
+<script>
+    function n0() {
+        let btn=document.getElementById("display").innerHTML;
+        let dis= btn+"0";
+        document.getElementById("display").innerHTML=dis;
+            }
+    function n1() {
+        let btn=document.getElementById("display").innerHTML;
+        let dis= btn+"1";
+        document.getElementById("display").innerHTML=dis;
+    }
+    function n2() {
+        let btn=document.getElementById("display").innerHTML;
+        let dis= btn+"2";
+        document.getElementById("display").innerHTML=dis;
+    }
+    function n3() {
+        let btn=document.getElementById("display").innerHTML;
+        let dis= btn+"3";
+        document.getElementById("display").innerHTML=dis;
+    }
+    function n4() {
+        let btn=document.getElementById("display").innerHTML;
+        let dis= btn+"4";
+        document.getElementById("display").innerHTML=dis;
+    }
+    function n5() {
+        let btn=document.getElementById("display").innerHTML;
+        let dis= btn+"5";
+        document.getElementById("display").innerHTML=dis;
+    }
+    function n6() {
+        let btn=document.getElementById("display").innerHTML;
+        let dis= btn+"6";
+        document.getElementById("display").innerHTML=dis;
+    }
+    function n7() {
+        let btn=document.getElementById("display").innerHTML;
+        let dis= btn+"7";
+        document.getElementById("display").innerHTML=dis;
+    }
+    function n8() {
+        let btn=document.getElementById("display").innerHTML;
+        let dis= btn+"8";
+        document.getElementById("display").innerHTML=dis;
+    }
+    function n9() {
+        let btn=document.getElementById("display").innerHTML;
+        let dis= btn+"9";
+        document.getElementById("display").innerHTML=dis;
+    }
+    function add() {
+        let btn=document.getElementById("display").innerHTML;
+        let dis= btn+"+";
+        document.getElementById("display").innerHTML=dis;
+    }
+    function sub() {
+        let btn=document.getElementById("display").innerHTML;
+        let dis= btn+"-";
+        document.getElementById("display").innerHTML=dis;
+    }
+    function mul() {
+        let btn=document.getElementById("display").innerHTML;
+        let dis= btn+"*";
+        document.getElementById("display").innerHTML=dis;
+    }
+    function div() {
+        let btn=document.getElementById("display").innerHTML;
+        let dis= btn+"/";
+        document.getElementById("display").innerHTML=dis;
+    }
+    function anw() {
+        let dis=document.getElementById("display").innerHTML;
+        document.getElementById("display").innerHTML= eval(dis);
+    }
+    function resett() {
+        let dis=document.getElementById("display").innerHTML;
+        document.getElementById("display").innerHTML="";
+            }
+</script>
+
+</body>
+</html>

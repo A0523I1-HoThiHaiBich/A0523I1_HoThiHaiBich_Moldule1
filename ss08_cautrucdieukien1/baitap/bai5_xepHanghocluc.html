@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực</title>
+</head>
+<body>
+<script>
+    let kTra= +prompt("Nhập điểm kiểm tra:");
+    let giuaKi= +prompt("Nhập điểm giữa kì:");
+    let cuoiKy= +prompt("Nhập điểm cuối kỳ:");
+    let DTB= (kTra+giuaKi*2+cuoiKy*3)/6;
+    if(DTB>=9) alert("Học sinh xuất sắc.")
+        else if(DTB>=8) alert("Học sinh giỏi.");
+            else if (DTB>=6.5) alert("Học sinh Khá.");
+                else if(DTB>=5) alert("Học sinh TB.");
+                    else alert("Học sinh yếu.");
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính hoa hồng nhận được</title>
+</head>
+<body>
+<script>
+    let money= prompt("Nhập doanh số bán được:(triệu đồng)");
+    let com;
+    if (money<5) alert("Bạn chưa đủ doanh số tháng này.")
+        else {if(money<10) {
+            com=money*2/100;
+    }
+            else if(money<20)
+                com=money*5/100;
+                else if (money<50)
+                    com=money*10/100;
+                        else com=money*20/100;}
+    alert ("Tiền hoa hồng bạn nhận được là: "+com);
+</script>
+
+</body>
+</html>
