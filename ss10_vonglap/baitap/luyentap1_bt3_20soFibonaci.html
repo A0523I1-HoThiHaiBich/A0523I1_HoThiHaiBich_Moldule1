@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị 20 số Fibonaci đầu tiên</title>
+</head>
+<body>
+<script>
+    let count=2;
+    let a=1;
+    let b=1;
+    let c;
+    document.write("Dãy 20 số Fib đầu tiên: ");
+    document.write(a+ "<br>");
+    document.write(b+ "<br>");
+    while(count<=20)
+    { c=a+b;
+    document.write(c+"<br>");
+      a=b;
+      b=c;count++;
+
+    }
+</script>
+
+</body>
+</html>

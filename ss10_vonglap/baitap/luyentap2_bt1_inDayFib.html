@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In dãy Fibonacii</title>
+</head>
+<body>
+<script>
+    let a=1;
+    let b=1;
+    let c;
+    let count=0;
+    let n =prompt("Nhập n số Fib cần hiên thị")
+    document.write(a+ "<br>");
+    document.write(b+ "<br>");
+    while (count<n){
+        c=a+b;
+        a=b;
+        b=c;
+        count++;
+        document.write(c +"<br>");
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số đàu tiên trong dãy Fib chia hết cho 5</title>
+</head>
+<body>
+<script>
+    let a=1;
+    let b=1;
+    let c;
+    let flag=false;
+    document.write("Số đàu tiên trong dãy Fib chia hết cho 5: ");
+    while(flag!=true)
+    {   c=a+b;
+        a=b;
+        b=c;
+        if(c%5==0){
+            flag=true;
+            document.write(c);
+        }
+
+    }
+</script>
+</body>
+</html>

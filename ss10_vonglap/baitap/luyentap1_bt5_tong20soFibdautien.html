@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tổng 20 số Fibonaci đàu tiên</title>
+</head>
+<body>
+<script>
+    let count=2;
+    let a=1;
+    let b=1;
+    let c;
+    let sum=2;
+    document.write(a+ " ");
+    document.write(b+ " ");
+    while (count<18)
+    {
+        c=a+b;
+        a=b;
+        b=c;
+        document.write(c+ " ");
+        count++;
+        sum+=c;
+    }
+    document.write("<br>"+ "Tổng 20 số Fibonaci đàu tiên: "+sum);
+
+</script>
+
+</body>
+</html>

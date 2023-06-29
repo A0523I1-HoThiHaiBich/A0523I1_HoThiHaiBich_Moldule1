@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<body>
+<button onclick="play()">Chơi</button>
+<script>
+    function play() {
+        let fisrtNum= +prompt("Nhập khoảng giá trị bạn muốn đoán: ");
+        let lastNum=  +prompt();
+        let n= +prompt("Nhập giá trị trong khoảng "+fisrtNum+ " - "+ lastNum);
+        let randomNumber = Math.floor(Math.random() * (lastNum - fisrtNum)) + fisrtNum;
+        for (let i=1;i<=3;i++){
+            if(n==randomNumber) {
+                alert("Chúc mừng bạn, đã đoán thành công");}
+            else
+             if (i==3) alert("Bạn đã nhập sai quá 3 lần, end game.")  ;
+              else if(n<randomNumber){
+                alert("Chưa đúng, n nhỏ hơn random. Hãy nhập số lơn hơn:");
+                n= +prompt("Nhập giá trị trong khoảng "+fisrtNum+ " - "+ lastNum);
+            }
+            else if(n>randomNumber){
+                     alert("Chưa đúng, n lớn hơn random. Hãy nhập số nhỏ hơn:");
+                     n= +prompt("Nhập giá trị trong khoảng "+fisrtNum+ " - "+ lastNum);
+        }
+
+
+        }
+
+    }
+</script>
+
+</body>
+</html>
