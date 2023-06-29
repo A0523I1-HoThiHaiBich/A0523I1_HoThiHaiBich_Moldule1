@@ -2,9 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Tính tền điện</title>
 </head>
 <body>
-$END$
+<script>
+    let e= prompt("Nhập số điện đã tiêu thụ(Kwh): ");
+    let b1= 1.484;
+    let b2=1.533;
+    let b3=1.786;
+    let b4= 2.242;
+    let b5=2.503;
+    let b6= 2.587;
+    let money;
+    if(e<=50){
+        money=e*b1;
+    }else if (51<e<=100){
+        money= 50*b1+(e-50)*b2;
+    }else if( 101<e<=200){
+        money=50*b1+50*b2+(e-100)*b3;
+    }else if( 201<e<=300){
+        money=50*b1+50*b2+100*b3+(e-200)*b4;
+    }else if( 301<e<=400){
+        money=50*b1+50*b2+100*b3+100*b4+(e-300)*b5;
+    }else if( e>401){
+        money=50*b1+50*b2+100*b3+100*b4+100*b5+(e-400)*b6;
+    }
+        alert("Tổng tiền bạn phải trả = "+money);
+</script>
+
 </body>
 </html>
