@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+</head>
+<body>
+<html>
+<h1>DICTIONARY</h1>
+<input type="text" id="input">
+<button onclick="translate()">Translate</button>
+<div id="result"></div>
+</html>
+
+<script>
+    let eng= ["hello"," goodbye","good","one","two","three"];
+    let vnam=["xin chào","tạm biệt", "tốt","một","hai","ba"];
+    function translate() {
+        let isExist=false;
+        let key= document.getElementById("input").value;
+        for(let i=0; i<eng.length;i++){
+            if(key===eng[i]){
+                let trans =vnam[i];
+                isExist= true;
+                document.getElementById("result").innerHTML= trans;
+                break;
+            }
+            if(!isExist){
+                document.getElementById("result").innerHTML="Không tìm thấy keyword.";
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
