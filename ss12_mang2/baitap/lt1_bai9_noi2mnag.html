@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nối 2 mảng</title>
+</head>
+<body>
+<script>
+    let arrA = new Array(10);
+    for (let i = 0; i < arrA.length; i++) {
+        arrA[i] = +prompt("Nhap phan tu ArrA[" + i + "] =");
+    }
+    document.write("Array A:" + arrA + "<br>");
+    let arrB = new Array(10);
+    for (let i = 0; i < arrB.length; i++) {
+        arrB[i] = +prompt("Nhap phan tu ArrB[" + i + "] =");
+    }
+    document.write("Array B:" + arrB + "<br>");
+    let arrC= new Array(20);
+    arrC= arrA.concat(arrB);
+    document.write("Array C :" + arrC + "<br>");
+
+</script>
+</body>
+</html>

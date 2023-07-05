@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số từ trong chuổi</title>
+</head>
+<body>
+<script>
+    let str="hello my name is    Bich%%% ";
+    str= str.replace(/\s/g,"");
+    str= str.replace(/[]{2}/gi,"");
+    document.write(str.split("").length);
+</script>
+
+</body>
+</html>
