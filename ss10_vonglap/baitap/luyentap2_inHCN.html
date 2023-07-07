@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In Hình chữ nhật</title>
+</head>
+<body>
+<script>
+    let width=+prompt("Nhập chiều dài HCN:");
+    let heigh=+prompt("Nhập chiều rộng HCN");
+    let i;
+    let j;
+    for ( i=0; i<heigh;i++) {
+        if (i == 0 || i == heigh - 1) {
+            for (j = 0; j < width; j++) {
+                document.write("*");
+            }
+            document.write("<br>");
+
+        } else {
+            for (j = 0; j < width; j++) {
+                if (j === 0 || j === width - 1) {
+                    document.write("*");
+                }else {
+                    document.write("&nbsp;&nbsp");
+                }
+
+            }
+                document.write("<br>");
+            }
+
+    }
+</script>
+
+</body>
+</html>

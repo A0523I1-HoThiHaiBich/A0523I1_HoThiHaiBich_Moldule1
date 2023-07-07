@@ -24,8 +24,29 @@
         document.write("<br>");
 
     }
+    document.write("_________________________"+"<br>")
+    for(i=n; i>0;i--){
+        for(j=0;j<n;j++){
+            if(j<n-i){
+                document.write("&nbsp;&nbsp");
+            }else{
+                document.write("*");
+            }
+        }
+        document.write("<br>");
 
-
+    }
+    document.write("_________________________"+"<br>")
+    for(i=n; i>0;i--){
+        for(j=0;j<n;j++){
+            if(j>=i-1){
+                document.write("*");
+            }else{
+                document.write("&nbsp;&nbsp");
+            }
+        }
+        document.write("<br>");
+    }
 </script>
 
 </body>
