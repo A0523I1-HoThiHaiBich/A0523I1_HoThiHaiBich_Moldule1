@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng quản lý sản phẩm</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<html>
+<h2>Add new product</h2>
+<input type="input" id="newpro" placeholder="New product">
+<button onclick="addPro()">Add</button>
+<br>
+<h2>Display all products</h2>
+</html>
+
+<script>
+    let arr = ["Sony Xperia", "Sony Xperia", "Nokia 6", "Xiao Mi", "Apple iphone 6S", "Apple iphone 8", "Apple iphone 11", "Oppo A71"];
+    document.write("<table>");
+    document.write("<tr>\n" +
+        "    <th colspan=\"2\">Product Name</th>\n" +
+        "    <th>product</th>\n" +
+        "    </tr>");
+    for (let i = 0; i < arr.length; i++) {
+        document.write("<tr>\n" +
+            "        <td><p>" + arr[i] + "</p></td>\n" +
+            "        <td><button onclick='edit()'>edit</button></td>\n" +
+            "        <td><button onclick='del()'>delete</button></td>\n" +
+            "    </tr>")
+    }
+    addPro(arr);
+    function addPro(array) {
+        let pro= document.getElementById("newpro");
+        array.unshift(pro);
+        document.write(array)
+
+
+    }
+    function edit() {
+
+    }
+    function del() {
+
+    }
+</script>
+
+</body>
+</html>

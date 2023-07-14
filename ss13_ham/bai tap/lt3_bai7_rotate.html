@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi chổ</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhập so a:");
+    let b = +prompt("Nhập so b:");
+    rotate(a,b)
+
+    function rotate(x,y) {
+       let temp;
+       temp=a;
+       a=b;
+       b=temp;
+       document.write(a+";"+b);
+    }
+</script>
+
+</body>
+</html>

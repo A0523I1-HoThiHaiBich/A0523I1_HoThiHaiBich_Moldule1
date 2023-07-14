@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giai thừa</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Nhập so n:");
+    document.write("Giai thừa"+n+  "= " + factorialNum(n) + "<br>");
+
+
+    function factorialNum(n) {
+        let N = 1;
+        for( let i=1; i<=n;i++)
+            N*=i;
+        return N;
+
+    }
+
+</script>
+</body>
+</html>

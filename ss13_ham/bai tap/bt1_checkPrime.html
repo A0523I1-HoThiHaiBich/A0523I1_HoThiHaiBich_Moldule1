@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nguyên tố</title>
+</head>
+<body>
+<script>
+    let n = prompt("Nhập số nguyên n: ")
+    checkPrime(n);
+
+    function checkPrime(number) {
+        let flag = true;
+        for (let i = 2; i <number; i++) {
+            if (number % i == 0) {
+                flag = false;
+                break;
+            }
+        }
+            if (flag == true) {
+                document.write(number + " là số nguyên tố <br/>");
+            } else {
+                document.write(number + " không phải là số nguyên tố <br/>");
+            }
+    }
+
+    let j=2;
+    document.write("các số nguyên tố nhỏ hơn "+n+ "<br>");
+    while (j<n) {
+        isPrime(j);
+        j++;
+    }
+    function isPrime(number) {
+        let flag = true;
+        for (let i = 2; i < number;i++)
+        {
+            if (number % i == 0) {
+                flag = false;
+                break;
+            }
+        }
+        if (flag == true) {
+            document.write(number + "<br>");
+        }
+    }
+</script>
+
+</body>
+</html>

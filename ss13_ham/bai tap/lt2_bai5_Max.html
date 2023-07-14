@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Max and Min</title>
+</head>
+<body>
+<script>
+    let n1 = Math.round(Math.random() * 100);
+    let n2 = Math.round(Math.random() * 100);
+    let n3 = Math.round(Math.random() * 100);
+    document.write("GTNN trong 3 số: "+n1+","+n2+","+n3+ "="+ checkMax(n1, n2, n3)+ "<br>");
+    document.write("GTNN trong 3 số: "+n1+","+n2+","+n3+ "="+ checkMin(n1, n2, n3));
+
+    function checkMax(a, b, c) {
+        let max=0;
+        if (a > b) {
+            if (a > c) {
+                max = a;
+            }
+            else(max = c);
+        } else {
+            if (b > c) {
+                max = b;
+            }
+            else(max = c);
+        }
+        return max;
+    }
+    function checkMin(a, b, c) {
+        let min=0;
+        if (a < b) {
+            if (a < c) {
+                min = a;
+            }
+            else(min = c);
+        } else {
+            if (b < c) {
+                min = b;
+            }
+            else(min = c);
+        }
+        return min;
+    }
+</script>
+</body>
+</html>
