@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Thuế TNCN</title>
+</head>
+<body>
+<script>
+    let salary = +prompt("Nhập tiền lương( triệu): ");
+    document.write("Lương của bạn: "+salary+ "<br>");
+    let tax=0;
+    let net;
+    if( salary>15){
+        tax= salary*0.2;
+    }
+    else if( salary>7){
+        tax= salary*0.1;
+    }
+    else tax=salary*0.05;
+    net= salary-tax;
+
+    document.write("Thuế TNCN của bạn là: "+tax+ "<br>");
+    document.write("Lương thưc nhận của bạn là: "+net+ "<br>");
+</script>
+
+</body>
+</html>

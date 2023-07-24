@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tam giác cân đặc </title>
+</head>
+<body>
+<script>
+    let h= +prompt("Nhập chiều cao:");
+    insaoTamGiacCanDac();
+    function insaoTamGiacCanDac() {
+        for (let i = 0; i < h; i++) {
+            for (let j = 0; j < 2 * h+1; j++) {
+                if (j >= h - i - 1 && j <= h + i - 1) {
+                    document.write("*");
+                } else
+                    document.write("&nbsp");
+            }document.write("<br>")
+        }
+    }
+</script>
+</body>
+</html>

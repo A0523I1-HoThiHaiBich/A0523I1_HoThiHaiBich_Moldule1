@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check nguyên âm, phụ âm</title>
+</head>
+<body>
+<script>
+    let array=["U","E","O","A","I","u","e","o","a","i"];
+    let key= prompt(" Nhập ký tự cần check:");
+    checkKytu();
+
+    function checkKytu() {
+        let flag=false;
+        for( let i=0; i<array.length;i++){
+            if( key ==array[i]){
+                flag= true;
+            }
+        }
+        if(flag==true) {
+            document.write(key +" là nguyên âm.");
+        }else document.write(key + " là phụ âm.");
+
+
+    }
+
+</script>
+
+</body>
+</html>
