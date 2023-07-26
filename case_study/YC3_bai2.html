@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a=[6,2,3,5,8];
+    let b=[1,2,3,3,7,1,10,9,9,9,4,7];
+    let c=[];
+    let flag = true;
+    for( let i=0; i<b.length;i++) {
+        for(let j =0; j<a.length; j++) {
+            if (b[i] ===a[j] ) {
+                flag = false;
+                break;
+            }else {
+                flag=true;
+
+            }
+        }if( flag===true){
+            c.push(b[i]);
+        }
+    }
+    document.write("Mảng:"+c+"<br>");
+
+    for(let i=1;i<c.length; i++){
+    c.sort((x,y)=>x-y);
+    for(let j=0; j<c.length;j++){
+        if(c[i]==c[i-1]){
+            c.splice(i,1);
+        }
+    }
+    }document.write(c);
+
+</script>
+</body>
+</html>
