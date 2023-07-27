@@ -9,6 +9,8 @@
     let price;
     let total;
     let i;
+    let choice;
+    let bill=0;
     do {
         let n = +prompt("Hãy chọn menu:\n"
         +"1. Cafe\n" +
@@ -21,16 +23,20 @@
         switch (n) {
             case 1: {
                 price = 25;
-                i = +prompt("Cafe giá:" + price+"\n"+"Nhập số lượng bạn muốn order:");
-                total = price * i;
-                document.write("Tông tiền bạn phải thanh toán:" +total);
+               i = +prompt("Cafe giá:" + price+"\n"+"Nhập số lượng bạn muốn order:");
+                   total = price * i;
+                   bill+=total;
+                   alert("Tiền bạn phải thanh toán:" +bill);
+                   choice=confirm("Bạn có muốn tiếp tục order?");
                 break;
             }
             case 2: {
                 price = 35;
                 i = +prompt("Cam vắt giá:" + price+"\n"+"Nhập số lượng bạn muốn order:");
                 total = price * i;
-                document.write("Tông tiền bạn phải thanh toán:" +total);
+                bill+=total;
+                alert("Tiền bạn phải thanh toán:" +bill);
+                choice=confirm("Bạn có muốn tiếp tục order?");
                 break;
             }
 
@@ -38,37 +44,43 @@
                 price = 25;
                 i = +prompt("Nước ép cà rốt giá:" + price+"\n"+"Nhập số lượng bạn muốn order:");
                 total = price * i;
-                document.write("Tông tiền bạn phải thanh toán:" +total);
+                bill+=total;
+                alert("Tiền bạn phải thanh toán:" +bill);
+                choice=confirm("Bạn có muốn tiếp tục order?");
                 break;
             }
             case 4: {
                 price = 20;
                 i = +prompt("Nước ép cà chua giá:" + price+"\n"+"Nhập số lượng bạn muốn order:");
                 total = price * i;
-                document.write("Tông tiền bạn phải thanh toán:" +total);
+                bill+=total;
+                alert("Tiền bạn phải thanh toán:" +bill);
+                choice=confirm("Bạn có muốn tiếp tục order?");
                 break;
             }
             case 5: {
                 price = 10;
                 i = +prompt("Nước lọc giá:" + price+"\n"+"Nhập số lượng bạn muốn order:");
                 total = price * i;
-                document.write("Tông tiền bạn phải thanh toán:" +total);
+                bill+=total;
+                alert("Tiền bạn phải thanh toán:" +bill);
+                choice=confirm("Bạn có muốn tiếp tục order?");
                 break;
             }
             case 6: {
                 price = 35;
                 i = +prompt("Nước dừa giá:" + price+"\n"+"Nhập số lượng bạn muốn order:");
                 total = price * i;
-                document.write("Tông tiền bạn phải thanh toán:" +total);
+                bill+=total;
+                alert("Tiền bạn phải thanh toán:" +bill);
+                choice=confirm("Bạn có muốn tiếp tục order?");
                 break;
             }
-
-
             case 7:
+                choice=false;
                 break;
-
         }}
-        while (n <= 7)
+    while (choice==true)
 
 
 </script>

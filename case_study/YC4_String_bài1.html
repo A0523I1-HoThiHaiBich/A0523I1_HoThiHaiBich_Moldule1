@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String bài 1</title>
+</head>
+<body>
+<script>
+    let string= prompt("Nhập chuổi cần chuyển hóa: ");
+    document.write("Chuổi ban đầu "+ string+ "<br>");
+    chuanHoa(string)
+
+    function chuanHoa(str) {
+                str.replace(/\s+/g,'').trim();
+                str.toLowerCase();
+                str.replace(/(^|\s)\S/g, function(l) {
+             l.toUpperCase();
+            }
+        document.write("Chuổi sau chuyển hóa"+ str);
+
+    }
+</script>
+
+</body>
+</html>

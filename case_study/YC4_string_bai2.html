@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let str= prompt("Nhập vào chuỗi:");
+    let str2=[];
+    let count=1;
+    let flag;
+    str2.push(str[0]);
+    differentSymbolsNaive(str);
+
+    function differentSymbolsNaive(string) {
+        for( let i=1; i<str.length;i++) {
+            flag = true;
+            for (let j = 0; j < str2.length; j++) {
+                if (str[i] === str[j]) {
+                    flag = false
+                }
+            }
+            if (flag === true) {
+                str2.push(str[i]);
+                count++;
+            }
+        }
+        document.write("Chuỗi " + str + " có "+ count+" ký tự khác nhau, là:  "+ str2);
+
+    }
+
+
+</script>
+
+</body>
+</html>

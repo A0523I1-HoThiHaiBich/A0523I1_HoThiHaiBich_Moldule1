@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số nguyên tố</title>
+</head>
+<body>
+<script>
+    let row= +prompt("Nhap so hang cua mang:");
+    let col= + prompt("Nhap so cot cua mang:");
+    let array =new Array(row);
+    for( let i=0; i<array.length;i++){
+        array[i]= new Array(col);
+        for( let j=0;j<array[i].length;j++){
+            array[i][j]= +prompt("Nhap gia tri A["+i+"]["+j+"]:");
+        }
+    }
+    for( let i=0; i<array.length;i++){
+        for (let j=0; j<array[i].length;j++){
+            document.write(array[i][j]+"&nbsp&nbsp");
+        }
+        document.write("<br>");
+    }
+    checkPrime(array);
+    function checkPrime(arr) {
+        let arrPrime= new Array();
+        let count =0;
+        let flag= true;
+        for( let i=0; i<arr.length;i++){
+            for (let j=0; j<arr[i].length;j++){
+                if( arr[i][j]==1||arr[i][j]==0){
+                    flag=false;
+                }else{
+                    for( let k=2; k<arr[i][j];k++){
+                        if(arr[i][j]%k==0){
+                            flag=false;
+                            break;
+                        }else flag= true;
+                    }
+                }
+                if (flag===true){
+                    count++;
+                    arrPrime.push(arr[i][j]);
+                }
+            }
+        }
+        document.write(" Mang co " +count+ "Số nguyên tố, là: "+arrPrime);
+
+    }
+</script>
+
+</body>
+</html>

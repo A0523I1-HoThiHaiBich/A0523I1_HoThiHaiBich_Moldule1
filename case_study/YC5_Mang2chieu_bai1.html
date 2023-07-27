@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tổng số chẵn trong mang 2 chiều</title>
+</head>
+<body>
+<script>
+    let row= +prompt("Nhập số hàng");
+    let col= +prompt("Nhập số cột");
+    let array= new Array(row);
+    for( let i=0; i<array.length;i++){
+         array[i]= new Array(col);
+         for( let j=0; j<array[i].length;j++){
+             array[i][j]=+prompt("Nhap gia tri tai vi tri Array["+i+"]["+j+"]");
+         }
+    }
+    for ( let i=0; i<array.length;i++){
+        for (let j=0; j<array[i].length;j++){
+            document.write(array[i][j]+ "&nbsp&nbsp");
+        }
+        document.write("<br>");
+    }
+    sumEven(array);
+    function sumEven(arr) {
+        let sum=0;
+        for( let i=0; i<arr.length;i++){
+            for( let j=0; j<arr[i].length;j++){
+                if( arr[i][j]%2==0){
+                    sum+= arr[i][j];
+                }
+            }
+        }
+        document.write("Tổng các số chẵn trong mảng array là: Sum= "+sum);
+
+    }
+</script>
+
+</body>
+</html>
