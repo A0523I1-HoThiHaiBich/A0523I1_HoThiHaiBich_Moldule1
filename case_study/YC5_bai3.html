@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Min Max</title>
+</head>
+<body>
+<script>
+    let row= +prompt("Nhập số hàng");
+    let col= +prompt("Nhập số cột");
+    let array= new Array(row);
+    for( let i=0; i<array.length;i++){
+        array[i]= new Array(col);
+        for( let j=0; j<array[i].length;j++){
+            array[i][j]=+prompt("Nhap gia tri tai vi tri Array["+i+"]["+j+"]");
+        }
+    }
+    for ( let i=0; i<array.length;i++){
+        for (let j=0; j<array[i].length;j++){
+            document.write(array[i][j]+ "&nbsp&nbsp");
+        }
+        document.write("<br>");
+    }
+    max(array);
+    min(array);
+    function max(arr) {
+        let max = arr[0][0];
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                if( arr[i][j]>max){
+                    max=arr[i][j];
+                }
+            }
+        }
+        document.write("Gia tri lon nhat trong mang la:"+max+"<br>");
+    }
+    function min(arr) {
+        let min = arr[0][0];
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                if( arr[i][j]<min){
+                    min=arr[i][j];
+                }
+            }
+        }
+        document.write("GTNN trong mang la:"+min);
+    }
+
+</script>
+
+</body>
+</html>
