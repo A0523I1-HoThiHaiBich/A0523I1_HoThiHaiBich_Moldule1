@@ -7,16 +7,28 @@
 <body>
 <script>
     let string= prompt("Nhập chuổi cần chuyển hóa: ");
-    document.write("Chuổi ban đầu "+ string+ "<br>");
+    document.write("Chuổi ban đầu: "+ string+ "<br>");
     chuanHoa(string)
+    longestWord(string)
 
     function chuanHoa(str) {
-                str.replace(/\s+/g,'').trim();
-                str.toLowerCase();
-                str.replace(/(^|\s)\S/g, function(l) {
-             l.toUpperCase();
+               let str1= str.replace(/\s+/g,' ').trim().toLowerCase();
+                let str2= str1.replace(/(^|\s)\S/g, function(l) {
+                    return l.toUpperCase();
+            })
+        document.write("Chuổi sau chuyển hóa:"+ str2+ "<br>");
+    }
+    function longestWord(str) {
+        let word =str.split(" ");
+        let maxLength=0;
+        let index=0;
+        for( let i=0; i<word.length;i++){
+            if( word[i].length>maxLength){
+                maxLength=word[i].length;
+                index=i;
             }
-        document.write("Chuổi sau chuyển hóa"+ str);
+        }
+        document.write("Từ dài nhất trong chuỗi là: " + word[index]);
 
     }
 </script>
